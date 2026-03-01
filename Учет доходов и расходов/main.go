@@ -3,8 +3,8 @@ package main
 import "fmt"
 
 func main() {
-	// Slice для хранения всех транзакций
-	transactions := []float64{}
+	// Slice для хранения всех транзакций (предаллоцируем под типичное кол-во)
+	transactions := make([]float64, 0, 10)
 	for {
 		// Сканируем транзакцию от пользователя
 		transaction := scanTransaction()
